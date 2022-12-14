@@ -1,0 +1,7 @@
+{
+  "name": "shato",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

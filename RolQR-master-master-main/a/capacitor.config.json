@@ -1,0 +1,11 @@
+{
+  "appId": "dsx.x.x",
+  "appName": "xd",
+  "bundledWebRuntime": false,
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}
