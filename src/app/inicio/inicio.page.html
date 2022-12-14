@@ -1,0 +1,117 @@
+<ion-header>
+  <ion-toolbar id="main-content">
+    <h2 class="ion-text-center"> Nuestras Sedes</h2>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background">
+
+  <h1 style="text-align: center">Inicio</h1>
+
+  
+  <ion-card >
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img  id="carta1" src="https://www.duoc.cl/wp-content/uploads/2020/06/plaza-vespucio.jpg" />
+    <ion-card-header>
+      <ion-card-title>Sede Plaza Vespucio</ion-card-title>
+      
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-row>
+
+        <ion-col size="2">
+
+        </ion-col>
+
+        <ion-col size="8">
+          <ion-button [routerLink]="['/vespucip']"  expand="block"  shape="round">
+            Entrar
+          </ion-button>
+        </ion-col>
+
+        <ion-col size="2">
+
+        </ion-col>
+
+      </ion-row>
+      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card id="carta">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img  id="carta2" src="https://www.radiosanjoaquin.cl/wp-content/uploads/2015/06/sede-sanjoaquin.jpg" />
+    <ion-card-header>
+      <ion-card-title>Sede San Joaquin</ion-card-title>
+      
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-row>
+
+        <ion-col size="2">
+
+        </ion-col>
+
+        <ion-col size="8">
+          <ion-button [routerLink]="['/san-joaquin']"  expand="block"  shape="round">
+            Entrar
+          </ion-button>
+        </ion-col>
+
+        <ion-col size="2">
+
+        </ion-col>
+
+      </ion-row>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card >
+    <img  id="carta3 "src="http://photos.wikimapia.org/p/00/02/98/47/40_960.jpg" />
+    <ion-card-header>
+      <ion-card-title>Sede Puente Alto</ion-card-title>
+      
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-button [routerLink]="['/puente-alto']" expand="block"  shape="round">Entrar</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  
+
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar color="morado">
+        <h2 class="ion-text-center">Menú</h2>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-menu-toggle>
+
+        <ion-item routerLink="/dashboard" button>
+          <ion-label class="ion-text-center">Inicio</ion-label>
+        </ion-item>
+        
+        <ion-item button>
+          <ion-label routerLink="/inicio" class="ion-text-center">Sedes</ion-label>
+        </ion-item>
+        
+        <br><br><br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <ion-button (click)="onClick()">
+          <ion-icon name="log-out-outline"></ion-icon>
+        </ion-button>
+  
+  
+      </ion-menu-toggle>
+    </ion-content>
+    <ion-footer>
+      <ion-toolbar color="morado">
+      </ion-toolbar>
+    </ion-footer>
+  </ion-menu>

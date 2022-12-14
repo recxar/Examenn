@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar id="main-content" color="morado">
+    <h2 class="ion-text-center"> Profesor</h2>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form [formGroup]="datosCodigoQR" ng-app="appQR">
+
+    <ion-item>
+      <ion-label>Ingrese Fecha</ion-label>
+      <ion-input type="date" formControlName = "fechaQR" [(ngModel)]="fecha"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label >Ingrese asignatura</ion-label>
+    </ion-item>
+
+    <ion-radio-group  formControlName = "asignaturaQR" [(ngModel)]="asignatura">
+      <ion-item>
+        <ion-label>Programación</ion-label>
+        <ion-radio slot="end" value="PROGRAMACION" ></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Calidad</ion-label>
+        <ion-radio slot="end" value="CALIDAD"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Estadistica</ion-label>
+        <ion-radio slot="end" value="ESTADISTICA"></ion-radio>
+      </ion-item>
+  
+      
+    </ion-radio-group>
+      
+      <ion-row>
+        <ion-col size="2">
+          
+        </ion-col>
+        <ion-col size="8">
+          <qrcode [qrdata]="codigoQR" 
+        [width]="256"
+        [errorCorrectionLevel]="'M'" >
+      </qrcode> 
+
+      
+        </ion-col>
+        <ion-col size="2">
+          
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="2">
+          
+        </ion-col>
+        <ion-col size="8">
+          <ion-button expand="block" (click)="generarQR()">
+            Generar QR 
+          </ion-button>
+        </ion-col>
+        <ion-col size="2">
+          
+        </ion-col>
+      </ion-row>
+    
+  </form>
+
+</ion-content>
+
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="morado">
+      <h2 class="ion-text-center">Menú</h2>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-menu-toggle>
+
+      
+    
+      <br><br><br><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <ion-button (click)="onClick()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-menu-toggle>
+
+
+  </ion-content>
+
+  <ion-footer>
+    <ion-toolbar color="morado">
+    </ion-toolbar>
+  </ion-footer>
+</ion-menu>
